@@ -9,19 +9,22 @@ class EditUser extends Component {
     super(props);
 
     this.state = {
-      user: []
+      user: [],
     };
   }
 
   componentDidMount() {
     axios
-      .get("http://localhost:5000/api/tasks/" + this.props.match.params.id)
-      .then(response => {
+      .get(
+        "https://capestone-visto-server.herokuapp.com/api/tasks/" +
+          this.props.match.params.id
+      )
+      .then((response) => {
         this.setState({
-          user: response.data
+          user: response.data,
         });
       })
-      .catch(function(error) {
+      .catch(function (error) {
         console.log(error);
       });
   }

@@ -97,8 +97,8 @@ class CalculatorPage extends React.Component {
       };
     }
     console.log(data);
-    // fetch("https://capestone-visto-server.herokuapp.com/api/marital-status", {
-    fetch("http://localhost:5001/api/marital-status", {
+    fetch("https://capestone-visto-server.herokuapp.com/api/marital-status", {
+      // fetch("http://localhost:3306/api/marital-status", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
